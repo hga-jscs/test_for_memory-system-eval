@@ -1,0 +1,9 @@
+=== START system=lightrag bench=all r=r1,r2,r3 ===
+Traceback (most recent call last):
+  File "D:\test_for_memory-system-eval\bench_r123.py", line 24, in <module>
+    from simpleMem_src import get_config, OpenAIClient
+  File "D:\test_for_memory-system-eval\simpleMem_src\__init__.py", line 4, in <module>
+    from .config import Config, get_config, reset_config
+  File "D:\test_for_memory-system-eval\simpleMem_src\config.py", line 7, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'

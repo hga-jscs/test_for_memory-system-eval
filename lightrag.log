@@ -1,0 +1,142 @@
+2026-04-14 17:57:07,713 - lightrag - INFO - Ollama LLM Options: {}
+2026-04-14 17:57:07,714 - lightrag - INFO - Ollama Embedding Options: {}
+2026-04-14 17:57:11,414 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-04-14 17:57:11,414 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-04-14 17:57:11,415 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-04-14 17:57:11,415 - lightrag - INFO - Reranking is disabled
+2026-04-14 17:57:12,020 - lightrag - INFO - [] Created new empty graph file: D:\test_for_memory-system-eval\rag_storage\graph_chunk_entity_relation.graphml
+2026-04-14 17:57:12,125 - lightrag - INFO - WebUI assets mounted at /webui
+2026-04-14 17:57:12,287 - uvicorn.error - INFO - Started server process [29300]
+2026-04-14 17:57:12,288 - uvicorn.error - INFO - Waiting for application startup.
+2026-04-14 17:57:12,289 - lightrag - INFO - [] Process 29300 KV load full_docs with 0 records
+2026-04-14 17:57:12,289 - lightrag - INFO - [] Process 29300 KV load text_chunks with 0 records
+2026-04-14 17:57:12,290 - lightrag - INFO - [] Process 29300 KV load full_entities with 0 records
+2026-04-14 17:57:12,290 - lightrag - INFO - [] Process 29300 KV load full_relations with 0 records
+2026-04-14 17:57:12,290 - lightrag - INFO - [] Process 29300 KV load entity_chunks with 0 records
+2026-04-14 17:57:12,291 - lightrag - INFO - [] Process 29300 KV load relation_chunks with 0 records
+2026-04-14 17:57:12,291 - lightrag - INFO - [] Process 29300 KV load llm_response_cache with 0 records
+2026-04-14 17:57:12,292 - lightrag - INFO - [] Process 29300 doc status load doc_status with 0 records
+2026-04-14 17:57:12,292 - uvicorn.error - INFO - Application startup complete.
+2026-04-14 17:57:12,293 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-04-14 17:59:42,793 - uvicorn.access - INFO - 127.0.0.1:62724 - "GET /docs HTTP/1.1" 200
+2026-04-14 18:01:40,978 - uvicorn.access - INFO - 127.0.0.1:61966 - "POST /documents/texts HTTP/1.1" 200
+2026-04-14 18:01:40,980 - uvicorn.access - INFO - 127.0.0.1:61967 - "GET /track_status/insert_20260414_180140_b26c7138 HTTP/1.1" 404
+2026-04-14 18:01:40,982 - lightrag - INFO - Processing 3 document(s)
+2026-04-14 18:01:40,984 - lightrag - INFO - Extracting stage 1/3: unknown_source
+2026-04-14 18:01:40,984 - lightrag - INFO - Processing d-id: doc-9added3d78b3002ccc23d49b24e92746
+2026-04-14 18:01:40,985 - lightrag - INFO - Extracting stage 2/3: unknown_source
+2026-04-14 18:01:40,985 - lightrag - INFO - Processing d-id: doc-fcc7f34513882fc5942da8d3a3883a6c
+2026-04-14 18:01:40,988 - lightrag - INFO - Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+2026-04-14 18:01:43,321 - lightrag - ERROR - Error in ollama_embed: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-04-14 18:01:43,323 - lightrag - ERROR - Error in ollama_embed: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-04-14 18:01:43,325 - lightrag - ERROR - Embedding func: Error in decorated function for task 2892527993520_18261.64: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-04-14 18:01:43,326 - lightrag - ERROR - Embedding func: Error in decorated function for task 2892527996432_18261.64: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-04-14 18:01:43,372 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\lightrag.py", line 2040, in process_document
+    await asyncio.gather(*first_stage_tasks)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\kg\nano_vector_db_impl.py", line 124, in upsert
+    embeddings_list = await asyncio.gather(*embedding_tasks)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 513, in __call__
+    result = await self.func(*args, **kwargs)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 1043, in wait_func
+    return await future
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 747, in worker
+    result = await asyncio.wait_for(
+  File "D:\anaconda3\envs\mem-eval\lib\asyncio\tasks.py", line 445, in wait_for
+    return fut.result()
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\api\lightrag_server.py", line 776, in optimized_embedding_function
+    return await actual_func(**kwargs)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\llm\ollama.py", line 237, in ollama_embed
+    raise e
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\llm\ollama.py", line 224, in ollama_embed
+    data = await ollama_client.embed(
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 1011, in embed
+    return await self._request(
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 767, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 713, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-04-14 18:01:43,373 - lightrag - ERROR - Failed to extract document 1/3: unknown_source
+2026-04-14 18:01:43,378 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\lightrag.py", line 2040, in process_document
+    await asyncio.gather(*first_stage_tasks)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\kg\nano_vector_db_impl.py", line 124, in upsert
+    embeddings_list = await asyncio.gather(*embedding_tasks)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 513, in __call__
+    result = await self.func(*args, **kwargs)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 1043, in wait_func
+    return await future
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 747, in worker
+    result = await asyncio.wait_for(
+  File "D:\anaconda3\envs\mem-eval\lib\asyncio\tasks.py", line 445, in wait_for
+    return fut.result()
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\api\lightrag_server.py", line 776, in optimized_embedding_function
+    return await actual_func(**kwargs)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\llm\ollama.py", line 237, in ollama_embed
+    raise e
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\llm\ollama.py", line 224, in ollama_embed
+    data = await ollama_client.embed(
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 1011, in embed
+    return await self._request(
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 767, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 713, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-04-14 18:01:43,379 - lightrag - ERROR - Failed to extract document 2/3: unknown_source
+2026-04-14 18:01:43,385 - lightrag - INFO - Extracting stage 3/3: unknown_source
+2026-04-14 18:01:43,386 - lightrag - INFO - Processing d-id: doc-67932ac1a2186af4bebac35e98640229
+2026-04-14 18:01:45,705 - lightrag - ERROR - Error in ollama_embed: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-04-14 18:01:45,708 - lightrag - ERROR - Embedding func: Error in decorated function for task 2892528002464_18264.031: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-04-14 18:01:45,713 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\lightrag.py", line 2040, in process_document
+    await asyncio.gather(*first_stage_tasks)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\kg\nano_vector_db_impl.py", line 124, in upsert
+    embeddings_list = await asyncio.gather(*embedding_tasks)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 513, in __call__
+    result = await self.func(*args, **kwargs)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 1043, in wait_func
+    return await future
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\utils.py", line 747, in worker
+    result = await asyncio.wait_for(
+  File "D:\anaconda3\envs\mem-eval\lib\asyncio\tasks.py", line 445, in wait_for
+    return fut.result()
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\api\lightrag_server.py", line 776, in optimized_embedding_function
+    return await actual_func(**kwargs)
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\llm\ollama.py", line 237, in ollama_embed
+    raise e
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\lightrag\llm\ollama.py", line 224, in ollama_embed
+    data = await ollama_client.embed(
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 1011, in embed
+    return await self._request(
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 767, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+  File "D:\anaconda3\envs\mem-eval\lib\site-packages\ollama\_client.py", line 713, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-04-14 18:01:45,715 - lightrag - ERROR - Failed to extract document 3/3: unknown_source
+2026-04-14 18:01:45,721 - lightrag - INFO - Enqueued document processing pipeline stopped
+2026-04-14 18:08:33,734 - lightrag - INFO - Ollama LLM Options: {}
+2026-04-14 18:08:33,734 - lightrag - INFO - Ollama Embedding Options: {}
+2026-04-14 18:08:33,880 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-04-14 18:08:33,881 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-04-14 18:08:33,881 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-04-14 18:08:33,881 - lightrag - INFO - Reranking is disabled
+2026-04-14 18:08:34,427 - lightrag - INFO - [] Created new empty graph file: D:\test_for_memory-system-eval\rag_storage\graph_chunk_entity_relation.graphml
+2026-04-14 18:08:34,527 - lightrag - INFO - WebUI assets mounted at /webui
+2026-04-14 18:08:34,558 - uvicorn.error - INFO - Started server process [3624]
+2026-04-14 18:08:34,558 - uvicorn.error - INFO - Waiting for application startup.
+2026-04-14 18:08:34,571 - lightrag - INFO - [] Process 3624 KV load full_docs with 3 records
+2026-04-14 18:08:34,572 - lightrag - INFO - [] Process 3624 KV load text_chunks with 0 records
+2026-04-14 18:08:34,572 - lightrag - INFO - [] Process 3624 KV load full_entities with 0 records
+2026-04-14 18:08:34,573 - lightrag - INFO - [] Process 3624 KV load full_relations with 0 records
+2026-04-14 18:08:34,573 - lightrag - INFO - [] Process 3624 KV load entity_chunks with 0 records
+2026-04-14 18:08:34,573 - lightrag - INFO - [] Process 3624 KV load relation_chunks with 0 records
+2026-04-14 18:08:34,573 - lightrag - INFO - [] Process 3624 KV load llm_response_cache with 0 records
+2026-04-14 18:08:34,588 - lightrag - INFO - [] Process 3624 doc status load doc_status with 3 records
+2026-04-14 18:08:34,589 - uvicorn.error - INFO - Application startup complete.
+2026-04-14 18:08:34,590 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
