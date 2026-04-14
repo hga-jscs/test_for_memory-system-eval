@@ -22,6 +22,7 @@ import requests
 logger = logging.getLogger(__name__)
 
 from simpleMem_src import Evidence
+from local_debug_memory import LocalDebugMemory
 
 
 class LightRAGBenchMemory:
@@ -35,6 +36,8 @@ class LightRAGBenchMemory:
         self._api_key = os.getenv("LIGHTRAG_API_KEY", "")
         self._mode = os.getenv("LIGHTRAG_MODE", "mix")
         self._timeout = 60
+        self._fallback = LocalDebugMemory("LightRAG")
+        self._use_fallback = os.getenv("LIGHTRAG_FORCE_LOCAL", "0") == "1"
 
         self._ns = f"{Path(save_dir).name}_{uuid4().hex[:8]}"
         self.ingest_chunks = 0
@@ -52,6 +55,7 @@ class LightRAGBenchMemory:
     def add_memory(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> None:
         if text:
             self._buffer.append(text)
+            self._fallback.add_memory(text)
             logger.debug("[LightRAGBenchMemory] 缓存记忆片段，当前 buffer=%d", len(self._buffer))
 
     def _post_json(self, path: str, body: Dict[str, Any]) -> Dict[str, Any]:
@@ -103,12 +107,26 @@ class LightRAGBenchMemory:
         """异步提交文档并轮询状态直到完成。"""
         if not self._buffer:
             return
+        if self._use_fallback:
+            logger.warning("[LightRAGBenchMemory] 使用本地 fallback（LIGHTRAG_FORCE_LOCAL=1）")
+            self._fallback.build_index()
+            self.ingest_chunks = self._fallback.ingest_chunks
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            return
 
         texts = [self._with_namespace(t) for t in self._buffer]
         t0 = time.time()
 
         logger.info("[LightRAGBenchMemory] 提交建库文本，chunks=%d ns=%s", len(texts), self._ns)
-        submit_payload = self._post_json("/documents/texts", {"texts": texts})
+        try:
+            submit_payload = self._post_json("/documents/texts", {"texts": texts})
+        except Exception as e:
+            logger.warning("[LightRAGBenchMemory] 服务不可用，自动降级本地 fallback: %s", e)
+            self._use_fallback = True
+            self._fallback.build_index()
+            self.ingest_chunks = self._fallback.ingest_chunks
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            return
         track_id = self._extract_track_id(submit_payload)
         if not track_id:
             raise RuntimeError(f"[LightRAGBenchMemory] 建库返回缺少 track_id: {submit_payload}")
@@ -131,6 +149,8 @@ class LightRAGBenchMemory:
         raise RuntimeError(f"[LightRAGBenchMemory] 建库超时，最后状态: {last_status}")
 
     def retrieve(self, query: str, top_k: int = 10) -> List[Evidence]:
+        if self._use_fallback:
+            return [Evidence(content=x.content, metadata=x.metadata) for x in self._fallback.retrieve(query, top_k=top_k)]
         payload = {
             "query": query,
             "mode": self._mode,
@@ -138,7 +158,12 @@ class LightRAGBenchMemory:
             "include_chunk_content": True,
         }
         logger.debug("[LightRAGBenchMemory] 检索 query=%s top_k=%d mode=%s", query[:80], top_k, self._mode)
-        data = self._post_json("/query", payload)
+        try:
+            data = self._post_json("/query", payload)
+        except Exception as e:
+            logger.warning("[LightRAGBenchMemory] 检索降级本地 fallback: %s", e)
+            self._use_fallback = True
+            return [Evidence(content=x.content, metadata=x.metadata) for x in self._fallback.retrieve(query, top_k=top_k)]
 
         references = data.get("references", []) if isinstance(data, dict) else []
         prefix = f"[NS: {self._ns}]"
@@ -171,15 +196,18 @@ class LightRAGBenchMemory:
     def reset(self) -> None:
         """不依赖服务端删除，直接切换 namespace，保证后续检索隔离。"""
         self._buffer = []
+        self._fallback.reset()
         self._ns = f"{Path(self.save_dir).name}_{uuid4().hex[:8]}"
         self.ingest_chunks = 0
         self.ingest_time_ms = 0.0
 
     def audit_ingest(self) -> Dict[str, Any]:
+        backend = "LightRAG-http" if not self._use_fallback else "LightRAG-local-fallback"
         return {
             "ingest_chunks": self.ingest_chunks,
             "ingest_time_ms": round(self.ingest_time_ms),
             "ingest_llm_calls": 0,
             "ingest_llm_prompt_tokens": 0,
             "ingest_llm_completion_tokens": 0,
+            "backend": backend,
         }
