@@ -12,11 +12,21 @@ import os
 import sys
 import shutil
 import time
+import logging
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).parent))
-from simpleMem_src import get_config, Evidence
+from local_debug_memory import LocalDebugMemory
+
+logger = logging.getLogger(__name__)
+
+
+@dataclass
+class Evidence:
+    content: str
+    metadata: dict
 
 # HippoRAG 源码路径
 _HIPPO_SRC = Path(__file__).parent.parent / "memoRaxis" / "external" / "hipporag_repo" / "src"
@@ -70,6 +80,7 @@ def _build_hipporag(save_dir: str):
     """创建并返回一个 HippoRAG 实例（DashScope 直连，无需 embedding proxy）。"""
     from hipporag import HippoRAG  # type: ignore
     from hipporag.utils.config_utils import BaseConfig  # type: ignore
+    from simpleMem_src import get_config
 
     conf = get_config()
     llm_conf = conf.llm
@@ -116,6 +127,8 @@ class HippoRAGMemory:
         self.top_k_default = top_k_default
         self._buffer: List[str] = []
         self._h = None          # lazy init in build_index
+        self._fallback = LocalDebugMemory("HippoRAG")
+        self._use_fallback = os.getenv("HIPPORAG_FORCE_LOCAL", "0") == "1"
 
         # audit 字段（build_index 后填充）
         self.ingest_time_ms: float = 0.0
@@ -131,6 +144,8 @@ class HippoRAGMemory:
         """将一段文本按 CHUNK_SIZE 预分块后加入 buffer。返回新增 chunk 数。"""
         chunks = _text_to_chunks(text)
         self._buffer.extend(chunks)
+        for c in chunks:
+            self._fallback.add_memory(c)
         return len(chunks)
 
     def add_memory(self, text: str, metadata: Optional[Dict] = None) -> None:
@@ -143,17 +158,38 @@ class HippoRAGMemory:
         """构建 HippoRAG 图索引（昂贵操作，整个 user/case 所有 chunk 一次性传入）。"""
         if not self._buffer:
             raise ValueError("[HippoRAGMemory] buffer is empty, nothing to index.")
+        if self._use_fallback:
+            self._fallback.build_index()
+            self.ingest_chunks = self._fallback.ingest_chunks
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            return
 
         # 清理上一次留下的索引目录（防污染）
         if Path(self.save_dir).exists():
             shutil.rmtree(self.save_dir)
         Path(self.save_dir).mkdir(parents=True, exist_ok=True)
 
-        self._h = _build_hipporag(self.save_dir)
+        try:
+            self._h = _build_hipporag(self.save_dir)
+        except Exception as e:
+            logger.warning("[HippoRAGMemory] 初始化失败，降级本地 fallback: %s", e)
+            self._use_fallback = True
+            self._fallback.build_index()
+            self.ingest_chunks = self._fallback.ingest_chunks
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            return
         self.ingest_chunks = len(self._buffer)
 
         t0 = time.time()
-        self._h.index(self._buffer)
+        try:
+            self._h.index(self._buffer)
+        except Exception as e:
+            logger.warning("[HippoRAGMemory] build_index 失败，降级本地 fallback: %s", e)
+            self._use_fallback = True
+            self._fallback.build_index()
+            self.ingest_chunks = self._fallback.ingest_chunks
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            return
         self.ingest_time_ms = (time.time() - t0) * 1000
 
         self.ingest_llm_calls = self._h._audit_llm_calls
@@ -163,6 +199,8 @@ class HippoRAGMemory:
     # ── retrieve ─────────────────────────────────────────────────────────
 
     def retrieve(self, query: str, top_k: int = 0) -> List[Evidence]:
+        if self._use_fallback:
+            return [Evidence(content=x.content, metadata=x.metadata) for x in self._fallback.retrieve(query, top_k=top_k or self.top_k_default)]
         if self._h is None:
             return []
         k = top_k or self.top_k_default
@@ -201,6 +239,7 @@ class HippoRAGMemory:
             shutil.rmtree(self.save_dir)
         self._buffer = []
         self._h = None
+        self._fallback.reset()
         self.ingest_time_ms = 0.0
         self.ingest_llm_prompt_tokens = 0
         self.ingest_llm_completion_tokens = 0
@@ -211,10 +250,12 @@ class HippoRAGMemory:
     # ── audit summary ────────────────────────────────────────────────────
 
     def audit_ingest(self) -> Dict[str, Any]:
+        backend = "HippoRAG-graph" if not self._use_fallback else "HippoRAG-local-fallback"
         return {
             "ingest_chunks": self.ingest_chunks,
             "ingest_time_ms": round(self.ingest_time_ms),
             "ingest_llm_calls": self.ingest_llm_calls,
             "ingest_llm_prompt_tokens": self.ingest_llm_prompt_tokens,
             "ingest_llm_completion_tokens": self.ingest_llm_completion_tokens,
+            "backend": backend,
         }

@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
+from local_debug_memory import LocalDebugMemory
 
 
 @dataclass
@@ -61,6 +62,8 @@ class MemGPTBenchMemory:
 
         self._agent_id: Optional[str] = None
         self._agent_name: Optional[str] = None
+        self._fallback = LocalDebugMemory("MemGPT")
+        self._use_fallback = os.getenv("LETTA_FORCE_LOCAL", "0") == "1"
 
         self.ingest_chunks = 0
         self.ingest_time_ms = 0.0
@@ -75,6 +78,7 @@ class MemGPTBenchMemory:
         """仅缓存文本，等待 build_index 统一写入。"""
         if text:
             self._buffer.append(text)
+            self._fallback.add_memory(text)
             logger.debug("[MemGPTBenchMemory] 缓存记忆片段，当前 buffer=%d", len(self._buffer))
 
     def _resolve_model_fields(self) -> Dict[str, Any]:
@@ -189,12 +193,33 @@ class MemGPTBenchMemory:
         """将缓存批量写入 Letta archival passages。"""
         if not self._buffer:
             return
-        self._ensure_agent()
+        if self._use_fallback:
+            self._fallback.build_index()
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            self.ingest_chunks = self._fallback.ingest_chunks
+            return
+        try:
+            self._ensure_agent()
+        except Exception as e:
+            logger.warning("[MemGPTBenchMemory] 创建 agent 失败，降级本地 fallback: %s", e)
+            self._use_fallback = True
+            self._fallback.build_index()
+            self.ingest_time_ms = self._fallback.ingest_time_ms
+            self.ingest_chunks = self._fallback.ingest_chunks
+            return
 
         logger.info("[MemGPTBenchMemory] 开始 flush buffer 到 Letta，chunks=%d", len(self._buffer))
         t0 = time.time()
         for i, chunk in enumerate(self._buffer, start=1):
-            self._create_passage(self._agent_id, chunk)
+            try:
+                self._create_passage(self._agent_id, chunk)
+            except Exception as e:
+                logger.warning("[MemGPTBenchMemory] 服务不可用，降级本地 fallback: %s", e)
+                self._use_fallback = True
+                self._fallback.build_index()
+                self.ingest_time_ms = self._fallback.ingest_time_ms
+                self.ingest_chunks = self._fallback.ingest_chunks
+                return
             if i % 50 == 0:
                 logger.info("[MemGPTBenchMemory] flush 进度: %d/%d", i, len(self._buffer))
 
@@ -203,9 +228,21 @@ class MemGPTBenchMemory:
         logger.info("[MemGPTBenchMemory] flush 完成，耗时=%.1fms", self.ingest_time_ms)
 
     def retrieve(self, query: str, top_k: int = 10) -> List[Evidence]:
-        self._ensure_agent()
+        if self._use_fallback:
+            return [Evidence(content=x.content, metadata=x.metadata) for x in self._fallback.retrieve(query, top_k=top_k)]
+        try:
+            self._ensure_agent()
+        except Exception as e:
+            logger.warning("[MemGPTBenchMemory] 检索前创建 agent 失败，降级本地 fallback: %s", e)
+            self._use_fallback = True
+            return [Evidence(content=x.content, metadata=x.metadata) for x in self._fallback.retrieve(query, top_k=top_k)]
         logger.debug("[MemGPTBenchMemory] 检索 query=%s top_k=%d", query[:80], top_k)
-        items = self._search_passages(self._agent_id, query=query, top_k=top_k)
+        try:
+            items = self._search_passages(self._agent_id, query=query, top_k=top_k)
+        except Exception as e:
+            logger.warning("[MemGPTBenchMemory] 检索降级本地 fallback: %s", e)
+            self._use_fallback = True
+            return [Evidence(content=x.content, metadata=x.metadata) for x in self._fallback.retrieve(query, top_k=top_k)]
 
         evidences: List[Evidence] = []
         for i, item in enumerate(items[:top_k]):
@@ -229,6 +266,7 @@ class MemGPTBenchMemory:
     def reset(self) -> None:
         """重置缓存与 agent，确保下个 case 隔离。"""
         self._buffer = []
+        self._fallback.reset()
 
         if self._agent_id:
             self._delete_agent(self._agent_id)
@@ -239,10 +277,12 @@ class MemGPTBenchMemory:
         self.ingest_time_ms = 0.0
 
     def audit_ingest(self) -> Dict[str, Any]:
+        backend = "MemGPT-http" if not self._use_fallback else "MemGPT-local-fallback"
         return {
             "ingest_chunks": self.ingest_chunks,
             "ingest_time_ms": round(self.ingest_time_ms),
             "ingest_llm_calls": 0,
             "ingest_llm_prompt_tokens": 0,
             "ingest_llm_completion_tokens": 0,
+            "backend": backend,
         }
