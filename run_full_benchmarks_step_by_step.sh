@@ -5,6 +5,7 @@ set -euo pipefail
 #   1) lightrag
 #   2) hipporag
 #   3) raptor
+#   4) memgpt
 # 默认覆盖 3 benchmark × r1,r2,r3（等价 bench_r123 --bench all --r r1,r2,r3）。
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -16,7 +17,7 @@ BENCH="${BENCH:-all}"
 R_MODES="${R_MODES:-r1,r2,r3}"
 mkdir -p "$LOG_DIR"
 
-SYSTEMS=(lightrag hipporag raptor)
+SYSTEMS=(lightrag hipporag raptor memgpt)
 
 prefix_stream() {
   local tag="$1"
