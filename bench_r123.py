@@ -57,7 +57,7 @@ def create_memory(system: str, save_dir: str):
 
 
 def needs_build(system: str) -> bool:
-    return system in ("hipporag", "amem", "raptor", "lightrag")
+    return system in ("hipporag", "amem", "raptor", "lightrag", "memgpt")
 
 
 def get_top_k(system: str) -> int:
