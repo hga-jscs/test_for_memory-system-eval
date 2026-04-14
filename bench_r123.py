@@ -46,16 +46,22 @@ def create_memory(system: str, save_dir: str):
     elif system == "raptor":
         from raptor_bench_src import RaptorBenchMemory
         return RaptorBenchMemory(save_dir=save_dir)
+    elif system == "memgpt":
+        from memgpt_bench_src import MemGPTBenchMemory
+        return MemGPTBenchMemory(save_dir=save_dir)
+    elif system == "lightrag":
+        from lightrag_bench_src import LightRAGBenchMemory
+        return LightRAGBenchMemory(save_dir=save_dir)
     else:
         raise ValueError(f"Unknown system: {system}")
 
 
 def needs_build(system: str) -> bool:
-    return system in ("hipporag", "amem", "raptor")
+    return system in ("hipporag", "amem", "raptor", "lightrag")
 
 
 def get_top_k(system: str) -> int:
-    return {"simple": 5, "mem0": 5, "hipporag": 5, "amem": 10, "raptor": 10}.get(system, 10)
+    return {"simple": 5, "mem0": 5, "hipporag": 5, "amem": 10, "raptor": 10, "memgpt": 5, "lightrag": 5}.get(system, 10)
 
 
 # ── Adaptor factory ──────────────────────────────────────────
@@ -404,7 +410,7 @@ BENCH_MAP = {
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--system", required=True, choices=["simple", "mem0", "hipporag", "amem", "raptor"])
+    parser.add_argument("--system", required=True, choices=["simple", "mem0", "hipporag", "amem", "raptor", "memgpt", "lightrag"])
     parser.add_argument("--bench", required=True, help="memory_probe|structmemeval|amemgym|all")
     parser.add_argument("--r", default="r1,r2,r3", help="Comma-separated: r1,r2,r3")
     parser.add_argument("--start", type=int, default=0, help="AMemGym start user")
