@@ -28,6 +28,24 @@ from adaptors import (
 )
 
 
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_results_json(results_path: Path, payload: dict):
+    """Always write UTF-8 to avoid Windows GBK encoding failures."""
+    try:
+        with open(results_path, "w", encoding="utf-8", newline="\n") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+        print(f"    [SAVE] {results_path} (utf-8)")
+    except UnicodeEncodeError as e:
+        # Defensive fallback for unexpected environments.
+        print(f"    [WARN] UTF-8 write failed, fallback to ASCII escaped JSON: {e}")
+        with open(results_path, "w", encoding="utf-8", newline="\n") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=True)
+
+
 # ── System factory ───────────────────────────────────────────
 
 def create_memory(system: str, save_dir: str):
@@ -107,7 +125,7 @@ def judge_answer(llm, question, pred, reference, category="default"):
 # ═══════════════════════════════════════════════════════════════
 
 def run_memory_probe(system, r_modes):
-    data = json.load(open("memory-probe/data/locomo10.json"))
+    data = load_json("memory-probe/data/locomo10.json")
     convs = data if isinstance(data, list) else data.get("conversations", [data])
     top_k = get_top_k(system)
     config = get_config()
@@ -119,7 +137,7 @@ def run_memory_probe(system, r_modes):
         prior = []
         done_ids = set()
         if results_path.exists():
-            prior = json.load(open(results_path)).get("results", [])
+            prior = load_json(results_path).get("results", [])
             done_ids = {r["conv_id"] for r in prior}
 
         results = list(prior)
@@ -183,8 +201,7 @@ def run_memory_probe(system, r_modes):
             print(f"  [{len(results):2d}/{len(convs)}] conv={ci}  {correct}/{len(qas)}  steps_avg={sum(q['steps'] for q in qa_results)/len(qa_results):.1f}")
 
             # Incremental save
-            with open(results_path, "w") as f:
-                json.dump({"results": results, "system": system, "r_mode": r_mode}, f, indent=2, ensure_ascii=False)
+            save_results_json(results_path, {"results": results, "system": system, "r_mode": r_mode})
 
             mem.reset()
 
@@ -219,7 +236,7 @@ def run_structmemeval(system, r_modes):
         prior = []
         done_keys = set()
         if results_path.exists():
-            prior = json.load(open(results_path)).get("results", [])
+            prior = load_json(results_path).get("results", [])
             done_keys = {(r["category"], r["case_id"]) for r in prior if not r.get("skipped")}
 
         results = list(prior)
@@ -228,7 +245,7 @@ def run_structmemeval(system, r_modes):
         for ti, task in enumerate(tasks):
             cat = task["category"]
             fp = task["path"]
-            case = json.load(open(fp))
+            case = load_json(fp)
             case_id = case.get("case_id", fp.stem)
             queries = case.get("queries", [])
 
@@ -269,8 +286,7 @@ def run_structmemeval(system, r_modes):
             })
             print(f"  [{len(results):3d}/{len(tasks)}] {cat[:20]:20s} {case_id[:25]:25s} {correct}/{len(queries)}")
 
-            with open(results_path, "w") as f:
-                json.dump({"results": results, "system": system, "r_mode": r_mode}, f, indent=2, ensure_ascii=False)
+            save_results_json(results_path, {"results": results, "system": system, "r_mode": r_mode})
 
             mem.reset()
 
@@ -295,7 +311,7 @@ def find_correct_index(qa, period_state):
 
 
 def run_amemgym(system, r_modes, start=0, end=None):
-    data = json.load(open("data/amemgym/v1.base/data.json"))
+    data = load_json("data/amemgym/v1.base/data.json")
     all_users = data if isinstance(data, list) else list(data.values())
     end = end or len(all_users)
     users = list(enumerate(all_users))[start:end]
@@ -391,8 +407,7 @@ def run_amemgym(system, r_modes, start=0, end=None):
             })
 
             # Incremental save
-            with open(results_path, "w") as f:
-                json.dump({"results": results, "system": system, "r_mode": r_mode}, f, indent=2, ensure_ascii=False)
+            save_results_json(results_path, {"results": results, "system": system, "r_mode": r_mode})
 
         total_c = sum(r["total_correct"] for r in results)
         total_e = sum(r["total_evals"] for r in results)
