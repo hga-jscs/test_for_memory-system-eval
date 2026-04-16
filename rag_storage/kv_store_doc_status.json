@@ -1,0 +1,1034 @@
+{
+  "doc-1bbbaba5a6c3d36cdc1897adf9ce934c": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-1bbbaba5a6c3d36cdc1897adf9ce934c"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[7:55 pm on 9 June, 2023]\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week. It was awesome! I talked about my transgender journey and encouraged students to get involved in the L...",
+    "content_length": 4618,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:40.196242+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336698,
+      "processing_end_time": 1776336700
+    }
+  },
+  "doc-7b0d63c06576593c346d5e5c40605b15": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-7b0d63c06576593c346d5e5c40605b15"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[1:50 pm on 17 August, 2023]\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike. I ran into a group of religious conservatives who said something that really upset me. It made me think...",
+    "content_length": 2991,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:40.196242+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336698,
+      "processing_end_time": 1776336700
+    }
+  },
+  "doc-55b591e74d08f4dc23395091d8bdac26": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-55b591e74d08f4dc23395091d8bdac26"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[6:55 pm on 20 October, 2023]\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident. We were so lucky he was okay. It was a real scary experience. Thankful...",
+    "content_length": 3010,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:42.308739+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336700,
+      "processing_end_time": 1776336702
+    }
+  },
+  "doc-cfed90b7e9f847ca5b92f38c9b80b87d": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-cfed90b7e9f847ca5b92f38c9b80b87d"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[1:56 pm on 8 May, 2023]\nCaroline: Hey Mel! Good to see you! How have you been?\nMelanie: Hey Caroline! Good to see you! I'm swamped with the kids & work. What's up with you? Anything new?\nCaroline: I went to a LGBTQ suppo...",
+    "content_length": 1802,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:42.307650+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336700,
+      "processing_end_time": 1776336702
+    }
+  },
+  "doc-76a9d9d27ae3c03e4c6d68fa997a5761": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-76a9d9d27ae3c03e4c6d68fa997a5761"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[10:37 am on 27 June, 2023]\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey, Caroline! Nice to hear from you! Love the necklace, any special meaning to it?\nCar...",
+    "content_length": 3210,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:44.423886+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336702,
+      "processing_end_time": 1776336704
+    }
+  },
+  "doc-c089f122b7ecd9692f1155fad92f0e4f": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-c089f122b7ecd9692f1155fad92f0e4f"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[8:18 pm on 6 July, 2023]\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nMelanie: Hey Caroline! Missed you. Anything new? Spill the beans!\nCaroline: Since our last chat, I've been looking into co...",
+    "content_length": 2420,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:44.422894+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336702,
+      "processing_end_time": 1776336704
+    }
+  },
+  "doc-dae985537c018871345e1ee825a6e58c": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-dae985537c018871345e1ee825a6e58c"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[3:31 pm on 23 August, 2023]\nCaroline: Hi Melanie! Hope you're doing good. Guess what I did this week? I took the first step towards becoming a mom - I applied to adoption agencies! It's a big decision, but I think I'm re...",
+    "content_length": 2733,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:46.531264+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336704,
+      "processing_end_time": 1776336706
+    }
+  },
+  "doc-9d0b82326882142aedd652e3afec4954": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9d0b82326882142aedd652e3afec4954"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[4:33 pm on 12 July, 2023]\nCaroline: Hey Mel, great to chat with you again! So much has happened since we last spoke - I went to an LGBTQ conference two days ago and it was really special. I got the chance to meet and con...",
+    "content_length": 3946,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:46.531264+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336704,
+      "processing_end_time": 1776336706
+    }
+  },
+  "doc-fe150aa992ffed75afc5029caf43e6b3": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-fe150aa992ffed75afc5029caf43e6b3"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[8:56 pm on 20 July, 2023]\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline! Good to talk to you again. What's up? Anything new since last time?\nCaroline: Hey Mel! A lot's happened since we last chatted...",
+    "content_length": 3745,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:48.646310+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336706,
+      "processing_end_time": 1776336708
+    }
+  },
+  "doc-837a2ae90fa8eeb9408e0bbbf8a8765d": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-837a2ae90fa8eeb9408e0bbbf8a8765d"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[9:55 am on 22 October, 2023]\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful. This is a big move towards my goal of having a family.\nMelanie: Congrats, Caroline!...",
+    "content_length": 2575,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:48.646310+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336706,
+      "processing_end_time": 1776336708
+    }
+  },
+  "doc-873588f881b0411ffc0a81f73d82bbce": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-873588f881b0411ffc0a81f73d82bbce"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[1:36 pm on 3 July, 2023]\nCaroline: Since we last spoke, some big things have happened. Last week I went to an LGBTQ+ pride parade. Everyone was so happy and it made me feel like I belonged. It showed me how much our comm...",
+    "content_length": 2277,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:50.743034+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336708,
+      "processing_end_time": 1776336710
+    }
+  },
+  "doc-17d7464c35e62b2aa750662f61bd407b": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 2,
+    "chunks_list": [
+      "chunk-17d7464c35e62b2aa750662f61bd407b",
+      "chunk-1c52b2b7a4a8b512bad90d4f8e69f204"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[1:51 pm on 15 July, 2023]\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, it's been super busy here. So much since we talked! Last Fri I finally took my kids to a pottery workshop. ...",
+    "content_length": 4900,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:50.743034+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336708,
+      "processing_end_time": 1776336710
+    }
+  },
+  "doc-ac488cb10a37b6c26b46de283f5f5ff5": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-ac488cb10a37b6c26b46de283f5f5ff5"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[2:31 pm on 17 July, 2023]\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago. It was great to unplug and hang with the kids. What've you been up to? Anything ...",
+    "content_length": 2266,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:52.840964+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336710,
+      "processing_end_time": 1776336712
+    }
+  },
+  "doc-a1a873306128d27b7cd8812d94dd91c7": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 2,
+    "chunks_list": [
+      "chunk-a1a873306128d27b7cd8812d94dd91c7",
+      "chunk-495cac5f6193416dbebf4df677f7da40"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[1:33 pm on 25 August, 2023]\nCaroline: Hey, Mel! How's it going? There's something I want to tell you. I went hiking last week and got into a bad spot with some people. It really bugged me, so I tried to apologize to them...",
+    "content_length": 5060,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:52.840964+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336710,
+      "processing_end_time": 1776336712
+    }
+  },
+  "doc-9c16e184c3a9715ace1cee65b1c98632": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9c16e184c3a9715ace1cee65b1c98632"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[10:31 am on 13 October, 2023]\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice. I'm ready to be a mom and share my love and family. It's a great feeling. Anything new with yo...",
+    "content_length": 4130,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:54.950654+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336712,
+      "processing_end_time": 1776336714
+    }
+  },
+  "doc-c6c4534da64414bafda620c601f4d7a2": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-c6c4534da64414bafda620c601f4d7a2"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[12:09 am on 13 September, 2023]\nCaroline: Hey Mel, long time no chat! I had a wicked day out with the gang last weekend - we went biking and saw some pretty cool stuff. It was so refreshing, and the pic I'm sending is ju...",
+    "content_length": 3859,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:54.950654+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336712,
+      "processing_end_time": 1776336714
+    }
+  },
+  "doc-a73785f4b538f0e5662335772598462a": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-a73785f4b538f0e5662335772598462a"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[3:19 pm on 28 August, 2023]\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nMelanie: Hey Caroline! Since we last spoke, I took my kids to a park yesterday. They had fun exploring and playin...",
+    "content_length": 3964,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:57.067415+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336714,
+      "processing_end_time": 1776336717
+    }
+  },
+  "doc-31b25dbd9c56af62304e1478be052e52": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-31b25dbd9c56af62304e1478be052e52"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[2:24 pm on 14 August, 2023]\nMelanie: Hey Caroline! Last night was amazing! We celebrated my daughter's birthday with a concert surrounded by music, joy and the warm summer breeze. Seeing my kids' smiles was so awesome, a...",
+    "content_length": 2932,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:57.065416+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336714,
+      "processing_end_time": 1776336717
+    }
+  },
+  "doc-ff15d9b48ef7477da7cf84becf5898a4": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-ff15d9b48ef7477da7cf84becf5898a4"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_c050d8a1]\n[1:14 pm on 25 May, 2023]\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me. I ran a charity race for mental health last Saturday – it was really rewarding. Really made me think about ...",
+    "content_length": 2719,
+    "created_at": "2026-04-16T10:50:06.239658+00:00",
+    "updated_at": "2026-04-16T10:51:59.170282+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185006_4c3a601c",
+    "metadata": {
+      "processing_start_time": 1776336717,
+      "processing_end_time": 1776336719
+    }
+  },
+  "doc-b3fd5485f164a2e4065f1aef4eb0598e": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-b3fd5485f164a2e4065f1aef4eb0598e"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[4:33 pm on 12 July, 2023]\nCaroline: Hey Mel, great to chat with you again! So much has happened since we last spoke - I went to an LGBTQ conference two days ago and it was really special. I got the chance to meet and con...",
+    "content_length": 3946,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:51:59.170282+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336717,
+      "processing_end_time": 1776336719
+    }
+  },
+  "doc-f3970eb4af3820c9c8daa54ba29194d1": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-f3970eb4af3820c9c8daa54ba29194d1"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[10:31 am on 13 October, 2023]\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice. I'm ready to be a mom and share my love and family. It's a great feeling. Anything new with yo...",
+    "content_length": 4130,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:01.269846+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336719,
+      "processing_end_time": 1776336721
+    }
+  },
+  "doc-4b36909ac4bdc03bd610bfb9060210a3": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-4b36909ac4bdc03bd610bfb9060210a3"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[2:24 pm on 14 August, 2023]\nMelanie: Hey Caroline! Last night was amazing! We celebrated my daughter's birthday with a concert surrounded by music, joy and the warm summer breeze. Seeing my kids' smiles was so awesome, a...",
+    "content_length": 2932,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:01.269846+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336719,
+      "processing_end_time": 1776336721
+    }
+  },
+  "doc-d967eac308e59254ba0cdfc1036aa60e": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 2,
+    "chunks_list": [
+      "chunk-d967eac308e59254ba0cdfc1036aa60e",
+      "chunk-0c29ae4b806f70ffef717ce0dada0eff"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[1:51 pm on 15 July, 2023]\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, it's been super busy here. So much since we talked! Last Fri I finally took my kids to a pottery workshop. ...",
+    "content_length": 4900,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:03.421768+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336721,
+      "processing_end_time": 1776336723
+    }
+  },
+  "doc-56c5ba42c5efdece64f00a1fb58c4b57": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-56c5ba42c5efdece64f00a1fb58c4b57"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[3:19 pm on 28 August, 2023]\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nMelanie: Hey Caroline! Since we last spoke, I took my kids to a park yesterday. They had fun exploring and playin...",
+    "content_length": 3964,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:03.421768+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336721,
+      "processing_end_time": 1776336723
+    }
+  },
+  "doc-fae5fcfe75585f29deb8becceb9514a5": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-fae5fcfe75585f29deb8becceb9514a5"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[1:56 pm on 8 May, 2023]\nCaroline: Hey Mel! Good to see you! How have you been?\nMelanie: Hey Caroline! Good to see you! I'm swamped with the kids & work. What's up with you? Anything new?\nCaroline: I went to a LGBTQ suppo...",
+    "content_length": 1802,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:05.587525+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336723,
+      "processing_end_time": 1776336725
+    }
+  },
+  "doc-d0d576b9d8b92cb20bd9893536eaa9c6": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-d0d576b9d8b92cb20bd9893536eaa9c6"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[1:50 pm on 17 August, 2023]\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike. I ran into a group of religious conservatives who said something that really upset me. It made me think...",
+    "content_length": 2991,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:05.590525+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336723,
+      "processing_end_time": 1776336725
+    }
+  },
+  "doc-226b172130cc14a43b11afe577e70820": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-226b172130cc14a43b11afe577e70820"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[1:14 pm on 25 May, 2023]\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me. I ran a charity race for mental health last Saturday – it was really rewarding. Really made me think about ...",
+    "content_length": 2719,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:07.751973+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336725,
+      "processing_end_time": 1776336727
+    }
+  },
+  "doc-b2c6afcb35583142808fd2ac3a1b251b": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-b2c6afcb35583142808fd2ac3a1b251b"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[10:37 am on 27 June, 2023]\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey, Caroline! Nice to hear from you! Love the necklace, any special meaning to it?\nCar...",
+    "content_length": 3210,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:07.750928+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336725,
+      "processing_end_time": 1776336727
+    }
+  },
+  "doc-266d04f5742d39319aaad8b1a7fd3d65": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-266d04f5742d39319aaad8b1a7fd3d65"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[8:56 pm on 20 July, 2023]\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline! Good to talk to you again. What's up? Anything new since last time?\nCaroline: Hey Mel! A lot's happened since we last chatted...",
+    "content_length": 3745,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:09.926564+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336727,
+      "processing_end_time": 1776336729
+    }
+  },
+  "doc-76a9bb06126e246e015927aa02ad0d25": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-76a9bb06126e246e015927aa02ad0d25"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[2:31 pm on 17 July, 2023]\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago. It was great to unplug and hang with the kids. What've you been up to? Anything ...",
+    "content_length": 2266,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:09.922563+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336727,
+      "processing_end_time": 1776336729
+    }
+  },
+  "doc-9196356b161a646305186475ad35aa51": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9196356b161a646305186475ad35aa51"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[6:55 pm on 20 October, 2023]\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident. We were so lucky he was okay. It was a real scary experience. Thankful...",
+    "content_length": 3010,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:12.096255+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336729,
+      "processing_end_time": 1776336732
+    }
+  },
+  "doc-03878ecc1d4c4816ff0fc2c35748813e": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-03878ecc1d4c4816ff0fc2c35748813e"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[9:55 am on 22 October, 2023]\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful. This is a big move towards my goal of having a family.\nMelanie: Congrats, Caroline!...",
+    "content_length": 2575,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:12.096255+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336729,
+      "processing_end_time": 1776336732
+    }
+  },
+  "doc-0bf0a6c171c2527f9c714129b5161f64": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 2,
+    "chunks_list": [
+      "chunk-0bf0a6c171c2527f9c714129b5161f64",
+      "chunk-0dd5dfac69297b6088bb76eeaf31a4e4"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[1:33 pm on 25 August, 2023]\nCaroline: Hey, Mel! How's it going? There's something I want to tell you. I went hiking last week and got into a bad spot with some people. It really bugged me, so I tried to apologize to them...",
+    "content_length": 5060,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:14.237151+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336732,
+      "processing_end_time": 1776336734
+    }
+  },
+  "doc-0fc5c950b5f57095bbdf38692b930ce5": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-0fc5c950b5f57095bbdf38692b930ce5"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[8:18 pm on 6 July, 2023]\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nMelanie: Hey Caroline! Missed you. Anything new? Spill the beans!\nCaroline: Since our last chat, I've been looking into co...",
+    "content_length": 2420,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:14.237151+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336732,
+      "processing_end_time": 1776336734
+    }
+  },
+  "doc-2e5909474cfa6c8ac9d41f299fe2b691": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-2e5909474cfa6c8ac9d41f299fe2b691"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[3:31 pm on 23 August, 2023]\nCaroline: Hi Melanie! Hope you're doing good. Guess what I did this week? I took the first step towards becoming a mom - I applied to adoption agencies! It's a big decision, but I think I'm re...",
+    "content_length": 2733,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:16.372592+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336734,
+      "processing_end_time": 1776336736
+    }
+  },
+  "doc-e20d1b67062331189062605b3efeffeb": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-e20d1b67062331189062605b3efeffeb"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[7:55 pm on 9 June, 2023]\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week. It was awesome! I talked about my transgender journey and encouraged students to get involved in the L...",
+    "content_length": 4618,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:16.304699+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336734,
+      "processing_end_time": 1776336736
+    }
+  },
+  "doc-608e9e8a2d353629125c8d813267a2a6": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-608e9e8a2d353629125c8d813267a2a6"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[12:09 am on 13 September, 2023]\nCaroline: Hey Mel, long time no chat! I had a wicked day out with the gang last weekend - we went biking and saw some pretty cool stuff. It was so refreshing, and the pic I'm sending is ju...",
+    "content_length": 3859,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:18.440017+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336736,
+      "processing_end_time": 1776336738
+    }
+  },
+  "doc-5b68441912592a73793eb9b4e408a96c": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-5b68441912592a73793eb9b4e408a96c"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_b45cfbc3]\n[1:36 pm on 3 July, 2023]\nCaroline: Since we last spoke, some big things have happened. Last week I went to an LGBTQ+ pride parade. Everyone was so happy and it made me feel like I belonged. It showed me how much our comm...",
+    "content_length": 2277,
+    "created_at": "2026-04-16T10:50:14.768116+00:00",
+    "updated_at": "2026-04-16T10:52:18.514190+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185014_3f249263",
+    "metadata": {
+      "processing_start_time": 1776336736,
+      "processing_end_time": 1776336738
+    }
+  },
+  "doc-45f6c51c9f7d73eae287e8b574a2242e": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-45f6c51c9f7d73eae287e8b574a2242e"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[10:37 am on 27 June, 2023]\nCaroline: Hey Melanie! Long time no talk! A lot's been going on in my life! Take a look at this.\nMelanie: Hey, Caroline! Nice to hear from you! Love the necklace, any special meaning to it?\nCar...",
+    "content_length": 3210,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:20.556233+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336738,
+      "processing_end_time": 1776336740
+    }
+  },
+  "doc-07782e32246cc3debde36b05c028f37b": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-07782e32246cc3debde36b05c028f37b"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[10:31 am on 13 October, 2023]\nCaroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice. I'm ready to be a mom and share my love and family. It's a great feeling. Anything new with yo...",
+    "content_length": 4130,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:20.635826+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336738,
+      "processing_end_time": 1776336740
+    }
+  },
+  "doc-e7485cc6fb3e41456f030f0f1c45ed3e": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-e7485cc6fb3e41456f030f0f1c45ed3e"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[8:18 pm on 6 July, 2023]\nCaroline: Hey Mel! Long time no talk. Lots has been going on since then!\nMelanie: Hey Caroline! Missed you. Anything new? Spill the beans!\nCaroline: Since our last chat, I've been looking into co...",
+    "content_length": 2420,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:22.686511+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336740,
+      "processing_end_time": 1776336742
+    }
+  },
+  "doc-278a5af9ee775476671a51b59f2276c6": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-278a5af9ee775476671a51b59f2276c6"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[4:33 pm on 12 July, 2023]\nCaroline: Hey Mel, great to chat with you again! So much has happened since we last spoke - I went to an LGBTQ conference two days ago and it was really special. I got the chance to meet and con...",
+    "content_length": 3946,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:22.793850+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336740,
+      "processing_end_time": 1776336742
+    }
+  },
+  "doc-9ae6990378c605aef64dc46c7b864401": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9ae6990378c605aef64dc46c7b864401"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[2:24 pm on 14 August, 2023]\nMelanie: Hey Caroline! Last night was amazing! We celebrated my daughter's birthday with a concert surrounded by music, joy and the warm summer breeze. Seeing my kids' smiles was so awesome, a...",
+    "content_length": 2932,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:24.834471+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336742,
+      "processing_end_time": 1776336744
+    }
+  },
+  "doc-52bd85d99601a97c040f1aaf6d83b9c4": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-52bd85d99601a97c040f1aaf6d83b9c4"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[1:36 pm on 3 July, 2023]\nCaroline: Since we last spoke, some big things have happened. Last week I went to an LGBTQ+ pride parade. Everyone was so happy and it made me feel like I belonged. It showed me how much our comm...",
+    "content_length": 2277,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:24.890343+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336742,
+      "processing_end_time": 1776336744
+    }
+  },
+  "doc-13660d1af7f8cb4e56c45ad82f17a6bd": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-13660d1af7f8cb4e56c45ad82f17a6bd"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[3:31 pm on 23 August, 2023]\nCaroline: Hi Melanie! Hope you're doing good. Guess what I did this week? I took the first step towards becoming a mom - I applied to adoption agencies! It's a big decision, but I think I'm re...",
+    "content_length": 2733,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:26.926525+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336744,
+      "processing_end_time": 1776336746
+    }
+  },
+  "doc-cdff20a77df7e317ce3f57928bedbfe3": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-cdff20a77df7e317ce3f57928bedbfe3"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[7:55 pm on 9 June, 2023]\nCaroline: Hey Melanie! How's it going? I wanted to tell you about my school event last week. It was awesome! I talked about my transgender journey and encouraged students to get involved in the L...",
+    "content_length": 4618,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:27.008383+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336744,
+      "processing_end_time": 1776336747
+    }
+  },
+  "doc-a815cfc6e861645f7a2b1fb6f0995bbb": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-a815cfc6e861645f7a2b1fb6f0995bbb"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[1:50 pm on 17 August, 2023]\nCaroline: Hey Mel! How're ya doin'? Recently, I had a not-so-great experience on a hike. I ran into a group of religious conservatives who said something that really upset me. It made me think...",
+    "content_length": 2991,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:29.063298+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336746,
+      "processing_end_time": 1776336749
+    }
+  },
+  "doc-122bf3a20c299bc9373c9acdeddeac7c": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-122bf3a20c299bc9373c9acdeddeac7c"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[12:09 am on 13 September, 2023]\nCaroline: Hey Mel, long time no chat! I had a wicked day out with the gang last weekend - we went biking and saw some pretty cool stuff. It was so refreshing, and the pic I'm sending is ju...",
+    "content_length": 3859,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:29.138545+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336747,
+      "processing_end_time": 1776336749
+    }
+  },
+  "doc-eed92844b153e09505807231484a166d": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-eed92844b153e09505807231484a166d"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[1:14 pm on 25 May, 2023]\nMelanie: Hey Caroline, since we last chatted, I've had a lot of things happening to me. I ran a charity race for mental health last Saturday – it was really rewarding. Really made me think about ...",
+    "content_length": 2719,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:31.178563+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336749,
+      "processing_end_time": 1776336751
+    }
+  },
+  "doc-9564d3022082b1611081980eaeea1392": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9564d3022082b1611081980eaeea1392"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[9:55 am on 22 October, 2023]\nCaroline: Woohoo Melanie! I passed the adoption agency interviews last Friday! I'm so excited and thankful. This is a big move towards my goal of having a family.\nMelanie: Congrats, Caroline!...",
+    "content_length": 2575,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:31.266042+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336749,
+      "processing_end_time": 1776336751
+    }
+  },
+  "doc-0ce2dbd9f8cef0bda66a453eca8a5999": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-0ce2dbd9f8cef0bda66a453eca8a5999"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[2:31 pm on 17 July, 2023]\nMelanie: Hey Caroline, hope all's good! I had a quiet weekend after we went camping with my fam two weekends ago. It was great to unplug and hang with the kids. What've you been up to? Anything ...",
+    "content_length": 2266,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:33.317154+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336751,
+      "processing_end_time": 1776336753
+    }
+  },
+  "doc-0db80890bb0b76c897d27d484a1362e4": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 2,
+    "chunks_list": [
+      "chunk-0db80890bb0b76c897d27d484a1362e4",
+      "chunk-0c29ae4b806f70ffef717ce0dada0eff"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[1:51 pm on 15 July, 2023]\nCaroline: Hey Mel, what's up? Been a busy week since we talked.\nMelanie: Hey Caroline, it's been super busy here. So much since we talked! Last Fri I finally took my kids to a pottery workshop. ...",
+    "content_length": 4900,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:33.388583+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336751,
+      "processing_end_time": 1776336753
+    }
+  },
+  "doc-bb78cab12fa2b51704735f14bb0977c6": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-bb78cab12fa2b51704735f14bb0977c6"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[6:55 pm on 20 October, 2023]\nMelanie: Hey Caroline, that roadtrip this past weekend was insane! We were all freaked when my son got into an accident. We were so lucky he was okay. It was a real scary experience. Thankful...",
+    "content_length": 3010,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:35.434165+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336753,
+      "processing_end_time": 1776336755
+    }
+  },
+  "doc-bf8aec977938668e2910d8acb56dbb4a": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 2,
+    "chunks_list": [
+      "chunk-bf8aec977938668e2910d8acb56dbb4a",
+      "chunk-0dd5dfac69297b6088bb76eeaf31a4e4"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[1:33 pm on 25 August, 2023]\nCaroline: Hey, Mel! How's it going? There's something I want to tell you. I went hiking last week and got into a bad spot with some people. It really bugged me, so I tried to apologize to them...",
+    "content_length": 5060,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:35.523899+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336753,
+      "processing_end_time": 1776336755
+    }
+  },
+  "doc-aa3cbc3b23a67432a7545642fb93ca5b": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-aa3cbc3b23a67432a7545642fb93ca5b"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[3:19 pm on 28 August, 2023]\nCaroline: Hey Melanie, great to hear from you. What's been up since we talked?\nMelanie: Hey Caroline! Since we last spoke, I took my kids to a park yesterday. They had fun exploring and playin...",
+    "content_length": 3964,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:37.569300+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336755,
+      "processing_end_time": 1776336757
+    }
+  },
+  "doc-be777573164ebd90b5f37d1e715b42ed": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-be777573164ebd90b5f37d1e715b42ed"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[8:56 pm on 20 July, 2023]\nCaroline: Hey Melanie! Just wanted to say hi!\nMelanie: Hey Caroline! Good to talk to you again. What's up? Anything new since last time?\nCaroline: Hey Mel! A lot's happened since we last chatted...",
+    "content_length": 3745,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:37.663356+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336755,
+      "processing_end_time": 1776336757
+    }
+  },
+  "doc-9895e5408772056e85ffe02e0bbb2ca6": {
+    "status": "failed",
+    "error_msg": " (status code: 502)",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-9895e5408772056e85ffe02e0bbb2ca6"
+    ],
+    "content_summary": "[NS: lightrag_mp_0_55cc3266]\n[1:56 pm on 8 May, 2023]\nCaroline: Hey Mel! Good to see you! How have you been?\nMelanie: Hey Caroline! Good to see you! I'm swamped with the kids & work. What's up with you? Anything new?\nCaroline: I went to a LGBTQ suppo...",
+    "content_length": 1802,
+    "created_at": "2026-04-16T10:51:38.084537+00:00",
+    "updated_at": "2026-04-16T10:52:39.705771+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260416_185138_8d3366be",
+    "metadata": {
+      "processing_start_time": 1776336757,
+      "processing_end_time": 1776336759
+    }
+  }
+}
