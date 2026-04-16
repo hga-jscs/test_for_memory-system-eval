@@ -45,6 +45,34 @@ class _NoQAModel:
         return ""
 
 
+def _build_no_qa_model():
+    """构造兼容 RAPTOR 类型检查的空 QA 模型。"""
+    base_qa_model = None
+    import_errors = []
+    for import_path in (
+        "raptor.QAModels",
+        "external.raptor_repo.raptor.QAModels",
+    ):
+        try:
+            module = __import__(import_path, fromlist=["BaseQAModel"])
+            base_qa_model = getattr(module, "BaseQAModel", None)
+            if base_qa_model is not None:
+                break
+        except Exception as e:
+            import_errors.append(f"{import_path}: {type(e).__name__}({e})")
+
+    if base_qa_model is not None:
+        class _CompatNoQAModel(base_qa_model):  # type: ignore[misc, valid-type]
+            def answer_question(self, *args, **kwargs):
+                return ""
+
+        return _CompatNoQAModel()
+
+    # 回退到旧实现（某些本地调试场景下没有完整 raptor 依赖）
+    logger.debug("无法导入 BaseQAModel，回退无继承实现: %s", "; ".join(import_errors))
+    return _NoQAModel()
+
+
 class _CompatEmbeddingModel:
     def __init__(self):
         from simpleMem_src import get_config
@@ -149,10 +177,12 @@ class RaptorBenchMemory:
     def _make_config(self):
         from raptor import RetrievalAugmentationConfig
 
+        qa_model = _build_no_qa_model()
+        logger.info("RAPTOR config ready: qa_model=%s", qa_model.__class__.__name__)
         return RetrievalAugmentationConfig(
             embedding_model=self._emb,
             summarization_model=self._summ,
-            qa_model=_NoQAModel(),
+            qa_model=qa_model,
             tb_num_layers=self._tb_num_layers,
             tb_max_tokens=self._tb_max_tokens,
             tb_summarization_length=self._tb_summarization_length,
@@ -171,11 +201,13 @@ class RaptorBenchMemory:
             config = self._make_config()
             ra = RetrievalAugmentation(config=config, tree=None)
             text = "\n\n".join(self._buffer)
+            logger.info("RAPTOR开始构建索引: chunks=%d, text_len=%d", len(self._buffer), len(text))
             t0 = _time.time()
             ra.add_documents(text)
             self._ingest_time_ms = int((_time.time() - t0) * 1000)
             self._ra = ra
             self._use_fallback = False
+            logger.info("RAPTOR构建完成: ingest_time_ms=%d, tree_ready=%s", self._ingest_time_ms, bool(getattr(self._ra, "tree", None)))
         except Exception as e:
             logger.warning("RAPTOR不可用，降级本地 fallback: %s", e)
             self._use_fallback = True
